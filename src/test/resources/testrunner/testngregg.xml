@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Regresstion" thread-count="3" parallel="tests"
+	verbose="4">
+	<listeners>
+	<listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"></listener>
+	<listener class-name="com.qa.automation.listeners.TestAllureListener"></listener>
+	<listener class-name="com.qa.automation.listeners.AnnotationTransformer"></listener>
+	</listeners>
+
+	<test name="LoginPageTest">
+		<classes>
+			<class name="com.qa.automation.test.LoginPageTest" />
+		</classes>
+	</test>
+	<test name="Home PageTest">
+		<classes>
+			<class name="com.qa.automation.test.HomePageTest" />
+		</classes>
+	</test>
+	<test name="Product pageTest">
+		<classes>
+			<class name="com.qa.automation.test.ProductPageTest" />
+		</classes>
+
+	</test> <!-- Test -->
+
+
+
+</suite> <!-- Suite -->

@@ -125,8 +125,8 @@
 					<reuseForks>true</reuseForks>
 					<!-- Configuration goes here, e.g., to run a specific test suite file -->
 					<suiteXmlFiles>
-					 <!--	<suiteXmlFile>src/test/resources/testrunner/testngregg.xml</suiteXmlFile>-->
-					 <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>  
+					 <suiteXmlFile>src/test/resources/testrunner/testngregg.xml</suiteXmlFile>
+					<!--	 <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>  -->
 				
 					</suiteXmlFiles>
 					

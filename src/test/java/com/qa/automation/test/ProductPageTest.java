@@ -67,5 +67,14 @@ public class ProductPageTest extends BaseTest {
 		Assert.assertEquals(actualProductInfo.get("priceInRupee"), "Rs. 1400");
 
 	}
+	
+	@Test
+	public void verifyLogoutLinkPresent() {
+		productPage = homePage.clickProductsBtn();
+		searchResultPage = productPage.searchProduct("Jeans");
+		ProductInformationPage productInformationPage = searchResultPage.selectProduct("Grunt Blue Slim Fit Jeans");
+	
+		Assert.assertTrue(productInformationPage.isLogoutLinkPresent(), "logout link is not present on product page");
+	}
 
 }

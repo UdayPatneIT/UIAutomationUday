@@ -30,6 +30,7 @@ public class ProductInformationPage {
 	private By reviewField = By.xpath("//*[@placeholder='Add Review Here!']");
 	private By submit = By.xpath("//*[@type='submit' and @id='button-review']");
 	private By productHeader = By.xpath("//*[@class='product-information']//h2");
+	private By logout = By.xpath("//a[@href='/logout']");
 
 	private By productImage = By.cssSelector("div.view-product img");
 
@@ -84,5 +85,9 @@ public class ProductInformationPage {
 		String price = genericUtils.getElement(productPrice).getText();
 		productMap.put("priceInRupee", price);
 	}
+	
+	public boolean isLogoutLinkPresent() {
+		return genericUtils.isElementDisplayed(logout, 1);
+				}
 
 }

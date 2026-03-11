@@ -3,28 +3,45 @@
 <suite name="Regresstion" thread-count="3" parallel="tests"
 	verbose="4">
 	<listeners>
-	<listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"></listener>
-	<listener class-name="com.qa.automation.listeners.TestAllureListener"></listener>
-	<listener class-name="com.qa.automation.listeners.AnnotationTransformer"></listener>
+		<listener
+			class-name="com.aventstack.chaintest.plugins.ChainTestListener"></listener>
+		<listener
+			class-name="com.qa.automation.listeners.TestAllureListener"></listener>
+		<listener
+			class-name="com.qa.automation.listeners.AnnotationTransformer"></listener>
 	</listeners>
 
-	<test name="LoginPageTest">
+	<test name="LoginPageTest_chrome">
+		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.qa.automation.test.LoginPageTest" />
 		</classes>
 	</test>
-	<test name="Home PageTest">
+	<test name="Home PageTest_chrome">
+		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.qa.automation.test.HomePageTest" />
 		</classes>
 	</test>
-	<test name="Product pageTest">
+	<test name="Product pageTest_chrome">
+		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.qa.automation.test.ProductPageTest" />
 		</classes>
-
 	</test> <!-- Test -->
 
+	<test name="LoginPageTest_Edge">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name="com.qa.automation.test.LoginPageTest" />
+		</classes>
+	</test>
+	<test name="Product pageTest_firefox">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.qa.automation.test.ProductPageTest" />
+		</classes>
+	</test>
 
 
 </suite> <!-- Suite -->
